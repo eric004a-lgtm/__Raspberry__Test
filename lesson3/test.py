@@ -43,6 +43,7 @@ class Filter:
         print(f"inlet:{__name__}")       # 印出目前模組名稱，方便除錯
         print(f"inlet:body:{body}")      # 印出請求內容（包含對話歷史）
         print(f"inlet:user:{__user__}")  # 印出使用者資訊
+        print(f"使用者輸入")  # 使用者輸入
 
         # 只對 role 是 "user" 或 "admin" 的人做檢查
         if __user__.get("role", "admin") in ["user", "admin"]:
@@ -68,5 +69,6 @@ class Filter:
         print(f"outlet:{__name__}")       # 印出目前模組名稱，方便除錯
         print(f"outlet:body:{body}")      # 印出 AI 的回應內容
         print(f"outlet:user:{__user__}")  # 印出使用者資訊
+        print(f"模型輸出")  # 使用者輸入
 
         return body  # 把（可能修改過的）回應傳回給使用者
